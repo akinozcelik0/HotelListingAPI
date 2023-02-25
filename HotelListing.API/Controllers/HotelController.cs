@@ -32,7 +32,7 @@ namespace HotelListing.API.Controllers
         [HttpGet("GetAll")]
         public async Task<ActionResult<IEnumerable<HotelDto>>> GetHotels()
         {
-            var hotels = await _hotelRepository.GetAllAsync<List<HotelDto>>();
+            var hotels = await _hotelRepository.GetAllAsync<HotelDto>();
             return Ok(hotels);
         }
         // GET: api/Hotel/?StartIndex=0&pagesize=25&pagenumber=1
